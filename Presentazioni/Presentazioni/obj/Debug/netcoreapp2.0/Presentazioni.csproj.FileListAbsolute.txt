@@ -1,0 +1,11 @@
+C:\Users\Allievo 8\source\repos\Presentazioni\Presentazioni\bin\Debug\netcoreapp2.0\Presentazioni.deps.json
+C:\Users\Allievo 8\source\repos\Presentazioni\Presentazioni\bin\Debug\netcoreapp2.0\Presentazioni.runtimeconfig.json
+C:\Users\Allievo 8\source\repos\Presentazioni\Presentazioni\bin\Debug\netcoreapp2.0\Presentazioni.runtimeconfig.dev.json
+C:\Users\Allievo 8\source\repos\Presentazioni\Presentazioni\bin\Debug\netcoreapp2.0\Presentazioni.dll
+C:\Users\Allievo 8\source\repos\Presentazioni\Presentazioni\bin\Debug\netcoreapp2.0\Presentazioni.pdb
+C:\Users\Allievo 8\source\repos\Presentazioni\Presentazioni\obj\Debug\netcoreapp2.0\Presentazioni.csprojAssemblyReference.cache
+C:\Users\Allievo 8\source\repos\Presentazioni\Presentazioni\obj\Debug\netcoreapp2.0\Presentazioni.csproj.CoreCompileInputs.cache
+C:\Users\Allievo 8\source\repos\Presentazioni\Presentazioni\obj\Debug\netcoreapp2.0\Presentazioni.AssemblyInfoInputs.cache
+C:\Users\Allievo 8\source\repos\Presentazioni\Presentazioni\obj\Debug\netcoreapp2.0\Presentazioni.AssemblyInfo.cs
+C:\Users\Allievo 8\source\repos\Presentazioni\Presentazioni\obj\Debug\netcoreapp2.0\Presentazioni.dll
+C:\Users\Allievo 8\source\repos\Presentazioni\Presentazioni\obj\Debug\netcoreapp2.0\Presentazioni.pdb

@@ -1,0 +1,58 @@
+﻿@model List<Autore>
+<span>Data:</span><br />
+<input type="date" id="datainizio" /><br />
+<select id="autore">
+    @foreach (Autore a in Model)
+    {
+        <option value="@a.Id">@a.Nome</option>
+
+    }
+
+</select>
+<button id="invia">Cerca</button>
+
+<div id="output">
+
+</div>
+
+@section scripts{
+    <script>
+    function caricaPresentazioni() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+
+                    var ildiv = document.getElementById("output");
+                    var lepresentazioni = JSON.parse(this.responseText);
+                    ildiv.innerHTML = "";
+                    for (let i = 0; i < lepresentazioni.length; i++) {
+                        ildiv.innerHTML += getHtmlPresentazione(lepresentazioni[i]);
+
+                    }
+                }
+            }
+            var ladata = document.getElementById("datainizio").value;
+            var autore = document.getElementById("autore").value;
+            xhttp.open("GET", "/Presentazione/GetPresentazioni?datainizio=" + ladata + "&autore=" + autore);
+            xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhttp.send(null);
+        };
+        function getHtmlPresentazione(presentazione) {
+
+            var testoHTML = [];
+            testoHTML[testoHTML.length] = "<div> <span > Id:";
+            testoHTML[testoHTML.length] = presentazione.id;
+            testoHTML[testoHTML.length] = "</span><br /> <span > Titolo";
+            testoHTML[testoHTML.length] = presentazione.titolo;
+            testoHTML[testoHTML.length] = "</span><br /> <span > Inizio";
+            testoHTML[testoHTML.length] = presentazione.inizio;
+            testoHTML[testoHTML.length] = "</span><br /> <span > Fine";
+            testoHTML[testoHTML.length] = presentazione.fine;
+            testoHTML[testoHTML.length] = "</span><br /> <span > Livello";
+            testoHTML[testoHTML.length] = presentazione.livello;
+            return testoHTML.join(" ");
+        };
+        var bottone = document.getElementById("invia");
+
+        bottone.addEventListener("click", caricaPresentazioni);</script>
+}

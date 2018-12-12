@@ -1,0 +1,12 @@
+﻿@model Autore
+<form asp-action="AggiungiAutore" method="post" role="form">
+    <span>Nome Autore:</span><br />
+    <input type="text" asp-for="Nome" /> <br />
+    <span>Email:</span><br />
+    <input type="text" asp-for="Email" /><br />
+    <span>Telefono:</span><br />
+    <input type="text" asp-for="Telefono" /><br />
+    <span>Skill:</span><br />
+    <input type="text" asp-for="Skill" /><br />
+    <button type="submit">Invia</button>
+</form>

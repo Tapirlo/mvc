@@ -1,0 +1,24 @@
+﻿@model PresentazioneModel
+<form asp-action="AggiungiPresentazione" method="post" role="form">
+    <span>Titolo Presentazione:</span><br />
+    <input type="text" asp-for="Titolo" /> <br />
+    <span>Inizio:</span><br />
+    <input type="date" asp-for="Inizio" /><br />
+    <span>Fine:</span><br />
+    <input type="date" asp-for="Fine" /><br />
+    <span>Livello:</span><br />
+    <input type="text" asp-for="Livello" /><br />
+    <span>Autori:</span><br />
+    <div>
+    
+    @for(var i=0;i<Model.Autori.Count;i++)
+    {
+        <div>
+            <span>@Model.Autori[i].Nome</span><br /><input type="checkbox" asp-for="Autori[i].Selected" />
+            <input type="hidden" value="@Model.Autori[i].Id"  asp-for="Autori[i].Id"/>
+        </div>
+   }
+    </div>
+
+    <button type="submit">Invia</button>
+</form>
